@@ -60,15 +60,34 @@ if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
 						<p><strong>Steam ID:</strong> <?= $steamid ?><br>
 						<strong>Steam Pass:</strong> <?= $PASSWORD ?></p>
 						<!-- -login %u %p -->
-						<a class="well" href='steam://nav/games'>Launch Steam!</a>
-	<h4>These computers have the following games already installed:</h4>
-<ul>
-<li>Team Fortress 2</li>
-<li>Counterstrike: Global Offensive</li>
-<li>Dota 2</li>
-</ul>
-<p>To load, simply appempt to download the game in Steam after entering your 
-tournament license and the game should load up.</p>
+						<a class="well" href='http://store.steampowered.com/about/?snr=1_4_4__11'>Download Steam!</a>
+
+						<h4>Play some steam games!</h4>
+							<ul>
+								<li>Team Fortress 2</li>
+								<li>Counterstrike: Global Offensive</li>
+								<li>Dota 2</li>
+							</ul>
+						<h4> IUGA Official Servers</h4>
+							<strong>Access the IUGA server and play together@ url = iuga.info </strong>
+							<ul>
+								<li>Minecraft (Must either boot into OSX mode, or go down in to IPLC)</li>
+								<li>Counterstrike: Global Offensive</li>
+							</ul>
+						<p>To play, simply download the game in Steam after entering your 
+						tournament license and the game should load up</p>
+
+
+<!-- For when Distribution Scripts start working again:
+
+						<h4>These computers have the following games already installed:</h4>
+						<ul>
+							<li>Team Fortress 2</li>
+							<li>Counterstrike: Global Offensive</li>
+							<li>Dota 2</li>
+						</ul>
+						<p>To load, simply download the game in Steam after entering your 
+						tournament license and the game should load up.</p> -->
 						<?php
 					}else{
 						?>
