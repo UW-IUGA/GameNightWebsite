@@ -70,7 +70,10 @@ if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
 							<ul>
 								<li>Team Fortress 2</li>
 								<li>Counterstrike: Global Offensive</li>
-								<ul><li>open console with ~ and type connect iuga.info</li></ul>
+								<ul>
+                                    <li>From the CSGO main menu go to OPTIONS, GAME SETTINGS and select ENABLE DEVELOPER CONSOLE</li>
+                                    <li>open console with ~ and type connect iuga.info</li>
+                                </ul>
 								<li>Dota 2</li>
 							</ul>
 						<h4> IUGA Official Servers</h4>
@@ -97,7 +100,8 @@ if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
 						<?php
 					}else{
 						?>
-					<p>Welcome! Let's play some games!<a></p>
+					<p>Welcome! Let's play some games!</p>
+                    <p>Download <a href="http://store.steampowered.com/">steam</a> and login!</p>
 		  				<!-- Inserts links to social pages here -->
 		  				<a class="well" href="?newid">Get Steam ID</a>
 		  				<a class="well" href="http://ischool.uw.edu/academics/informatics" target="_blank">Learn about Informatics</a>
