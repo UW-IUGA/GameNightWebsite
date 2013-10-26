@@ -7,6 +7,8 @@ $STEAM_BASE_ID = "TU0100024PC";
 $IP = $_SERVER['REMOTE_ADDR'];
 $STEAM_DATA = "steam.json";
 $PASSWORD = "5621978112";
+$QUARTER = "Autumn 2013";
+
 
 if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
 	$file = fopen($STEAM_DATA,'w+');
@@ -34,7 +36,7 @@ if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
 				</div>
 			<div class="centered">
 				<div id="countdown">
-				<h1>IUGA Game Night</h1>
+				<h1>IUGA Game Night: <?= $QUARTER?></h1>
 				<h5>Using IP: <?=$IP ?></h5>
 			  		<div class="message">
 			  			<?php
@@ -57,8 +59,10 @@ if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
 						}
 						$steamid = $STEAM_BASE_ID . $uid;
 						?>
-						<p><strong>Steam ID:</strong> <?= $steamid ?><br>
-						<strong>Steam Pass:</strong> <?= $PASSWORD ?></p>
+						<p>
+							<strong>Steam ID:</strong> <?= $steamid ?><br>
+							<strong>Steam Pass:</strong> <?= $PASSWORD ?>
+						</p>
 						<!-- -login %u %p -->
 						<a class="well" href='http://store.steampowered.com/about/?snr=1_4_4__11'>Download Steam!</a>
 
@@ -66,6 +70,7 @@ if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
 							<ul>
 								<li>Team Fortress 2</li>
 								<li>Counterstrike: Global Offensive</li>
+								<ul><li>open console with ~ and type connect iuga.info</li></ul>
 								<li>Dota 2</li>
 							</ul>
 						<h4> IUGA Official Servers</h4>
@@ -73,6 +78,7 @@ if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
 							<ul>
 								<li>Minecraft (Must either boot into OSX mode, or go down in to IPLC)</li>
 								<li>Counterstrike: Global Offensive</li>
+								<li>And more!</li>
 							</ul>
 						<p>To play, simply download the game in Steam after entering your 
 						tournament license and the game should load up</p>
@@ -146,6 +152,9 @@ if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
 </html>
 
 <?php
+
+// Return the steam ID associated with the given IP,
+// false if none exists.
 function getSteamID($json, $ipAddress){
 	$idIndex = array_search($ipAddress, $json);
 
