@@ -1,16 +1,16 @@
 <?php
-#tu0100241pc1 to tu0100241pc75 PW: 67995618
+
 error_reporting(E_ALL); 
 ini_set( 'display_errors','1');
 
-$STEAM_BASE_ID = "TU0100024PC";
+$STEAM_BASE_ID = "#BASE_ID_GOES_HERE";
 $IP = $_SERVER['REMOTE_ADDR'];
 $STEAM_DATA = "steam.json";
-$PASSWORD = "5621978112";
-$QUARTER = "Autumn 2013";
+$PASSWORD = "#PASSWORD_GOES_HERE";
+$QUARTER = "#CURRENT_QUARTER";
 
 
-if(isset($_GET['reset']) && $_GET['reset'] == "iugaofficer"){
+if(isset($_GET['#VARIABLE']) && $_GET['#VARIABLE'] == "#CODEWORD"){
 	$file = fopen($STEAM_DATA,'w+');
 	fwrite($file, "[]");
 	fclose($file);
